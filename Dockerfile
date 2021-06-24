@@ -2,7 +2,7 @@ FROM python:3.9-slim
 RUN apt-get update && apt-get install -y apache2 apache2-utils libapache2-mod-wsgi-py3 && pip install virtualenv
 
 ADD ./config-ser.conf /etc/apache2/sites-available/000-default.conf
-COPY ./pythonBlog /var/www/app
+COPY ./Django-Blog /var/www/app
 
 WORKDIR /var/www/
 RUN chown root:www-data app && chmod 777 app
