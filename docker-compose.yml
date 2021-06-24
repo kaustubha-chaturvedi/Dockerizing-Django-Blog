@@ -1,0 +1,9 @@
+version: "3.8"
+services: 
+  django-blog:
+    image: django-blog
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
